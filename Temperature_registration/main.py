@@ -74,7 +74,7 @@ try:
                     # if str(data['temperature']) == 'nan':
                     #     print("  ⚠️  Fault/ошибка датчика!")
             # print('Sleep')
-            # time.sleep(1)  # Не нагружаем CPU
+            time.sleep(0.001)  # Не нагружаем CPU
 
 except KeyboardInterrupt:
     print("\nОстановлено пользователем")
