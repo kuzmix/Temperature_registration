@@ -1,3 +1,4 @@
 /.venv/
 /Temperature_registration/rtd_temperatures.csv
 /.idea
+/data
