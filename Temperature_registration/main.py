@@ -53,7 +53,7 @@ print(f"Данные пишутся в {CSV_FILE}")
 time.sleep(2)  # Ждем стабилизации Arduino
 
 try:
-    with open(CSV_FILE, 'a', newline='', encoding='utf-8') as f:
+    with open(CSV_FILE, 'a+', newline='', encoding='utf-8', buffering=1) as f:
         writer = csv.writer(f)
 
         while True:
@@ -69,7 +69,7 @@ try:
 
                     # Вывод в консоль
                     print(f"{timestamp} | Канал {data['channel']}: {data['temperature']:.2f}°C")
-
+                    f.flush()
                     # Проверка NaN
                     # if str(data['temperature']) == 'nan':
                     #     print("  ⚠️  Fault/ошибка датчика!")
