@@ -8,7 +8,7 @@ import pandas as pd  # для удобного CSV (опционально)
 # Настройки
 SERIAL_PORT = 'COM3'  # Windows: COM3, Linux/Mac: /dev/ttyUSB0
 BAUD_RATE = 115200
-CSV_FILE = Path(f'data//rtd_temperatures_{datetime.now().strftime("%Y-%m-%d_%H-%M-%S")}.csv')
+CSV_FILE = Path(f'..//data//rtd_temperatures_{datetime.now().strftime("%Y-%m-%d_%H-%M-%S")}.csv')
 CSV_FILE.parent.mkdir(parents=True, exist_ok=True)
 
 
